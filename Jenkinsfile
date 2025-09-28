@@ -11,9 +11,9 @@ pipeline {
         stage('Test') {
             steps {
                 bat '''
-                    python -m pip install --upgrade pip
-                    pip install -r requirements.txt
-                    pytest -v
+                    "C:\\Users\\Elon Tavares\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install --upgrade pip
+                    "C:\\Users\\Elon Tavares\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt
+                    "C:\\Users\\Elon Tavares\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\pytest.exe" -v
                 '''
             }
         }
