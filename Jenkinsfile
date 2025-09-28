@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/MnuelD/python-api.git'
+                git branch: 'main', url: 'https://github.com/MnuelD/python-api.git'
             }
         }
 
