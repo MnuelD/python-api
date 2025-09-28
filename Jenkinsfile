@@ -10,8 +10,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh '''
-                    pip install --upgrade pip
+                bat '''
+                    python -m pip install --upgrade pip
                     pip install -r requirements.txt
                     pytest -v
                 '''
@@ -20,13 +20,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t python-api .'
+                bat 'docker build -t python-api .'
             }
         }
 
         stage('Run with Docker Compose') {
             steps {
-                sh 'docker-compose up -d'
+                bat 'docker-compose up -d'
             }
         }
     }
